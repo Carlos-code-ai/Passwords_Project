@@ -1,6 +1,5 @@
 package password;
 import java.lang.Math;
-
 import java.util.Scanner;
 
 public class Main {
@@ -18,7 +17,7 @@ public class Main {
 			int question=Integer.parseInt(sc.nextLine());
 			
 			if(question<1) {
-				System.out.println("Error! the value has to be greater than 0");
+				throw new Exception();
 			} 
 			
 			else {
@@ -27,7 +26,7 @@ public class Main {
 					resultado.append(carac.charAt(rand));
 				}
 			}
-			System.out.println("Your new password has been generated: "+ resultado);
+			System.out.println("Your new password has been generated: "+ resultado.toString());
 			
 		}catch(Exception e) {
 			System.out.println("Error! the value has to be valid");
